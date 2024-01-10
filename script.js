@@ -82,7 +82,7 @@ function update() {
     //console.log('timeout:'+gameState.enemyTimeoutInit);
     //console.log('speed:'+gameState.enemySpeed);
   }
-  ctx.fillStyle = "#FF0000";
+  ctx.fillStyle = "#33FF00";
   gameState.rectPosX += gameState.rectVelocity.x;
   gameState.rectPosY += gameState.rectVelocity.y;
   if (gameState.rectPosX > canvas.width - 10) {
@@ -102,7 +102,7 @@ function update() {
     gameState.rectVelocity.y = 0;
   }
   ctx.fillRect(gameState.rectPosX, gameState.rectPosY, 10, 10);
-  ctx.fillStyle = "#0000FF";
+  ctx.fillStyle = "#FF0000";
   for (let i = 0; i < gameState.enemies.length; ++i) {
     gameState.enemies[i].x -= gameState.enemies[i].velocity;
     ctx.fillRect(gameState.enemies[i].x, gameState.enemies[i].y, 10, 10);
@@ -125,7 +125,7 @@ function update() {
     gameState.friendAdded = false;
   }
   for (let i = 0; i < gameState.friends.length; ++i) {
-    ctx.fillStyle = "#FF0000";
+    ctx.fillStyle = "#33FF00";
     ctx.fillRect(gameState.friends[i].x, gameState.friends[i].y, 5, 5);
   }
   if(checkCollision(gameState)==true){
