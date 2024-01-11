@@ -129,6 +129,7 @@ function update() {
     ctx.fillRect(gameState.friends[i].x, gameState.friends[i].y, 5, 5);
   }
   if(checkCollision(gameState)==true){
+    alert(`Játék Vége! Pontszámod: ${gameState.score}`);
     gameState = {
   rectPosX: 10,
   rectPosY: canvas.height / 2 - 10,
